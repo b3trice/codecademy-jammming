@@ -45,11 +45,11 @@ class App extends React.Component {
     this.state.playlistName = name;
   }
 
-  savePlaylist() {
+  Spotify.savePlaylist() {
     const trackURIs = this.state.playlistTracks.map(track => track.uri);
   }
 
-  search(term) {
+  Spotify.search(term) {
     console.log(term);
   }
 
@@ -60,7 +60,7 @@ class App extends React.Component {
         <div className="App">
           <SearchBar onSearch={this.search} />
           <div className="App-playlist">
-            <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
+            <SearchResults searchResults={this.Spotify.search} onAdd={this.addTrack}/>
             <Playlist
               playlistName={this.state.playlistName}
               playlistTracks={this.state.playlistTracks}
