@@ -1,5 +1,6 @@
 const CLIENT_ID = 'e90816d436014b669f29042c94478fbf';
-const REDIRECT_URI = "http://localhost:3000/";
+// const REDIRECT_URI = "http://localhost:3000/";
+const REDIRECT_URI = "https://bjamming.surge.sh/";
 
 let accessToken = window.localStorage.getItem('accessToken');
 if (window.localStorage.getItem('accessTokenExpireAt') < (new Date()).getTime()) {
